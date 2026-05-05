@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Powerful Vegetable Cutter | About Us</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <header>
+        <nav>
+            <a href="about.html" class="logo">VegCut<span style="color:#37474f;">Pro</span></a>
+            <div class="nav-links">
+                <a href="about.html" class="active">About Machine</a>
+                <a href="contact.html">Contact Us</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+       <section class="hero">
+            <div class="hero-text">
+                <h1>Powerful <span>Vegetable Cutter</span> Machine</h1>
+                <p>Cut up to 160 vegetables per hour with ease. Designed for hotels, mess, home, and commercial kitchens. Built with a full aluminum body for lasting durability.</p>
+                <a href="contact.html" class="btn">Get a Quote</a>
+                <button class="btn open-popup" style="background: var(--dark-grey); margin-left: 10px;">Quick Enquiry</button>
+            </div>
+            <div class="hero-image">
+                <!-- Updated to use your verbatim filename -->
+                <img src="image_da671c.jpeg" alt="Vegetable Cutter Machine">
+            </div>
+        </section>
+
+        <h2 style="text-align: center; margin-bottom: 2rem;">Why Choose Our Machine?</h2>
+        
+        <section class="features">
+            <div class="feature-card">
+                <i class="fa-solid fa-bolt fa-3x" style="color: var(--primary-green); margin-bottom: 1rem;"></i>
+                <h3>Dual Speed Motor</h3>
+                <p>Operates at 720 RPM & 1440 RPM on a Single Phase Motor. Easy to plug and use anywhere.</p>
+            </div>
+            <div class="feature-card">
+                <i class="fa-solid fa-gears fa-3x" style="color: var(--primary-green); margin-bottom: 1rem;"></i>
+                <h3>No Gearbox</h3>
+                <p>Direct drive means less maintenance, higher efficiency, and no costly gearbox downtime.</p>
+            </div>
+            <div class="feature-card">
+                <i class="fa-solid fa-shield-halved fa-3x" style="color: var(--primary-green); margin-bottom: 1rem;"></i>
+                <h3>Full Aluminum Body</h3>
+                <p>Strong, rust-resistant, durable, and designed for a long lifespan in busy commercial kitchens.</p>
+            </div>
+            <div class="feature-card">
+                <i class="fa-solid fa-clock fa-3x" style="color: var(--primary-green); margin-bottom: 1rem;"></i>
+                <h3>Multipurpose</h3>
+                <p>Not just vegetables! Includes a coconut scraping attachment that finishes the job in just 40 seconds.</p>
+            </div>
+        </section>
+
+       <section class="gallery" style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin-bottom: 4rem;">
+            <!-- Updated to use your verbatim filenames -->
+            <img src="image_da6414.jpeg" alt="Machine Blades" style="width: 100%; border-radius: 15px;">
+            <img src="image_da63b7.jpeg" alt="Coconut Scraper" style="width: 100%; border-radius: 15px;">
+        </section>
+    </main>
+
+    <!-- Floating Buttons -->
+    <div class="fab-container">
+        <a href="https://wa.me/919363122984" target="_blank" class="fab fab-wa"><i class="fa-brands fa-whatsapp"></i></a>
+        <a href="tel:+919363122984" class="fab fab-call"><i class="fa-solid fa-phone"></i></a>
+    </div>
+
+    <!-- Lead Capture Popup Modal -->
+    <div class="modal-overlay" id="leadModal">
+        <div class="modal-content">
+            <span class="close-modal" id="closeModal">&times;</span>
+            <h2 style="margin-bottom: 1rem;">Request a Call Back</h2>
+            <p style="margin-bottom: 1.5rem; color: #666;">Leave your details and we will get back to you with pricing and shipping information.</p>
+            
+            <form action="https://formsubmit.co/rukmaninoncbe@gmail.com" method="POST">
+                <input type="hidden" name="_subject" value="New Quick Enquiry - VegCutPro">
+                <input type="hidden" name="_next" value="about.html">
+                
+                <div class="form-group">
+                    <label>Name</label>
+                    <input type="text" name="Name" required>
+                </div>
+                <div class="form-group">
+                    <label>Phone Number</label>
+                    <input type="tel" name="Phone" required>
+                </div>
+                <button type="submit" class="btn" style="width: 100%;">Submit Enquiry</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

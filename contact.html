@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | VegCutPro</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <header>
+        <nav>
+            <a href="about.html" class="logo">VegCut<span style="color:#37474f;">Pro</span></a>
+            <div class="nav-links">
+                <a href="about.html">About Machine</a>
+                <a href="contact.html" class="active">Contact Us</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div style="text-align: center; margin-bottom: 3rem;">
+            <h1>Get in Touch</h1>
+            <p style="font-size: 1.1rem; margin-top: 1rem;">Spare parts are always available. Contact us for sales, service, or wholesale inquiries.</p>
+            <div style="margin-top: 1rem; font-weight: 600;">
+                <p><i class="fa-solid fa-phone" style="color: var(--primary-green);"></i> +91 9363122984, +91 8678972374</p>
+                <p><i class="fa-solid fa-envelope" style="color: var(--primary-green);"></i> rukmaninoncbe@gmail.com</p>
+            </div>
+        </div>
+
+        <div class="glass-container">
+            <h2 style="margin-bottom: 2rem; color: var(--primary-green);">Send an Enquiry</h2>
+            
+            <!-- FormSubmit Integration -->
+            <form id="contactForm" action="https://formsubmit.co/rukmaninoncbe@gmail.com" method="POST">
+                
+                <!-- Anti-Spam and Config -->
+                <input type="hidden" name="_subject" value="New Website Enquiry!">
+                <input type="hidden" name="_captcha" value="false">
+                <input type="hidden" name="_template" value="table">
+                
+                <div class="form-group">
+                    <label for="customerType">I am a:</label>
+                    <select id="customerType" name="Customer Type">
+                        <option value="Customer">End Customer (Home/Hotel/Mess)</option>
+                        <option value="Wholesale Dealer">Wholesale Dealer</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" name="Name" required placeholder="John Doe">
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" id="phone" name="Phone" required placeholder="+91 00000 00000">
+                </div>
+
+                <!-- Conditional Fields for Wholesale -->
+                <div id="wholesaleFields" class="hidden">
+                    <div class="form-group">
+                        <label for="company">Company/Shop Name</label>
+                        <input type="text" id="company" name="Company Name">
+                    </div>
+                    <div class="form-group">
+                        <label for="quantity">Expected Quantity</label>
+                        <input type="number" id="quantity" name="Expected Quantity" min="1">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Requirements / Message</label>
+                    <textarea id="message" name="Message" rows="4" placeholder="How can we help you?"></textarea>
+                </div>
+
+                <button type="submit" class="btn" style="width: 100%; font-size: 1.1rem;">Send Enquiry</button>
+            </form>
+        </div>
+    </main>
+
+    <!-- Floating Buttons -->
+    <div class="fab-container">
+        <a href="https://wa.me/919363122984" target="_blank" class="fab fab-wa"><i class="fa-brands fa-whatsapp"></i></a>
+        <a href="tel:+919363122984" class="fab fab-call"><i class="fa-solid fa-phone"></i></a>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
