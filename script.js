@@ -1,5 +1,13 @@
 document.addEventListener("DOMContentLoaded", () => {
-    
+    // --- 0. Mobile Hamburger Menu Logic ---
+    const mobileMenu = document.getElementById("mobile-menu");
+    const navLinks = document.querySelector(".nav-links");
+
+    if (mobileMenu && navLinks) {
+        mobileMenu.addEventListener("click", () => {
+            navLinks.classList.toggle("active");
+        });
+    }
     // --- 1. Customer vs Wholesale Dealer Logic (Contact Page) ---
     const customerTypeSelect = document.getElementById("customerType");
     const wholesaleFields = document.getElementById("wholesaleFields");
