@@ -61,4 +61,54 @@ document.addEventListener("DOMContentLoaded", () => {
             }, 5000); // 5000ms = 5 seconds
         }
     }
+    // --- 3. Image Slider Logic (About Page) ---
+    const track = document.getElementById('sliderTrack');
+    const slides = Array.from(track.children);
+    const nextBtn = document.getElementById('nextBtn');
+    const prevBtn = document.getElementById('prevBtn');
+
+    if (track && slides.length > 0) {
+        let currentIndex = 0;
+
+        // Function to move the track to the correct slide
+        const updateSlider = (index) => {
+            // We shift the track by -100% multiplied by the current index
+            track.style.transform = `translateX(-${index * 100}%)`;
+        };
+
+        // Event listener for NEXT button
+        nextBtn.addEventListener('click', () => {
+            currentIndex++;
+            
+            // Loop back to the start if at the last slide
+            if (currentIndex >= slides.length) {
+                currentIndex = 0; 
+            }
+            updateSlider(currentIndex);
+        });
+
+        // Event listener for PREVIOUS button
+        prevBtn.addEventListener('click', () => {
+            currentIndex--;
+            
+            // Go to the last slide if previous is clicked on the first slide
+            if (currentIndex < 0) {
+                currentIndex = slides.length - 1;
+            }
+            updateSlider(currentIndex);
+        });
+
+        // OPTIONAL: Automatic slide every 7 seconds
+        let autoSlide = setInterval(() => {
+            nextBtn.click(); // Simulates a click on the next button
+        }, 7000);
+
+        // Pause automatic sliding if user interacts
+        const stopAutoSlide = () => {
+            clearInterval(autoSlide);
+        };
+
+        nextBtn.addEventListener('click', stopAutoSlide);
+        prevBtn.addEventListener('click', stopAutoSlide);
+    }
 });
