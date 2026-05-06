@@ -111,4 +111,33 @@ document.addEventListener("DOMContentLoaded", () => {
         nextBtn.addEventListener('click', stopAutoSlide);
         prevBtn.addEventListener('click', stopAutoSlide);
     }
+
+    // --- 4. Image Lightbox Logic ---
+    const imageModal = document.getElementById("imageModal");
+    const expandedImg = document.getElementById("expandedImg");
+    const closeImageModal = document.getElementById("closeImageModal");
+    const sliderImages = document.querySelectorAll('.slide img');
+
+    if (imageModal && expandedImg && sliderImages.length > 0) {
+        // When any slider image is clicked
+        sliderImages.forEach(img => {
+            img.addEventListener('click', function() {
+                imageModal.classList.add("active");
+                expandedImg.src = this.src; // Copy the clicked image's source
+            });
+        });
+
+        // Close when clicking the X
+        closeImageModal.addEventListener('click', () => {
+            imageModal.classList.remove("active");
+        });
+
+        // Close when clicking anywhere on the dark background
+        imageModal.addEventListener('click', (e) => {
+            if (e.target === imageModal) {
+                imageModal.classList.remove("active");
+            }
+        });
+    }
+    
 });
